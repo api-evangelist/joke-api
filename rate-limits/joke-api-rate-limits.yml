@@ -1,0 +1,57 @@
+name: JokeAPI Rate Limits
+description: JokeAPI enforces a per-client request budget to protect the service from abuse following historical DoS attacks.
+provider: JokeAPI
+url: https://jokeapi.dev/
+rateLimits:
+  - name: Standard Request Budget
+    description: Every client has a budget of 120 requests per minute across all endpoints.
+    requests: 120
+    window: 60
+    windowUnit: seconds
+    scope: per-client (IP-based)
+  - name: Joke Submission Limit
+    description: Joke submissions via POST /submit are limited more strictly to prevent spam.
+    requests: 5
+    window: 60
+    windowUnit: seconds
+    scope: per-client (IP-based)
+headers:
+  - name: RateLimit-Remaining
+    description: Number of requests remaining in the current rate limit window
+  - name: Retry-After
+    description: Seconds to wait before making the next request after hitting the rate limit
+endpoints:
+  - method: GET
+    path: /joke/{Category}
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /info
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /categories
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /langcode/{Language}
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /languages
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /flags
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /formats
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /ping
+    rateLimit: Standard Request Budget
+  - method: GET
+    path: /endpoints
+    rateLimit: Standard Request Budget
+  - method: POST
+    path: /submit
+    rateLimit: Joke Submission Limit
+notes:
+  - Rate limiting was introduced after JokeAPI was targeted by DoS attacks
+  - Limits apply per IP address with no way to increase them via paid tier
+  - The /ping endpoint can be used for uptime monitoring without counting against the budget in some configurations

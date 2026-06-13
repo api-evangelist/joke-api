@@ -1,0 +1,26 @@
+name: JokeAPI Plans and Pricing
+description: JokeAPI is a free, open-source REST API with no authentication or payment required. All users share a common rate limit tier.
+provider: JokeAPI
+url: https://jokeapi.dev/
+plans:
+  - name: Free
+    description: Full access to all JokeAPI endpoints with no registration, API key, or payment required. The API is community-funded via donations.
+    price: 0
+    currency: USD
+    billing: none
+    features:
+      - No API key required
+      - Access to all joke categories (Any, Programming, Misc, Dark, Pun, Spooky, Christmas)
+      - 6 supported joke languages
+      - Multiple response formats (JSON, XML, YAML, plain text)
+      - Content flag filtering (NSFW, Religious, Political, Racist, Sexist, Explicit)
+      - Safe mode for family-friendly content
+      - CORS support
+      - Access to 1,368+ jokes
+    rateLimits:
+      requestsPerMinute: 120
+      jokeSubmissionsPerMinute: 5
+notes:
+  - JokeAPI relies on community donations to cover hosting costs
+  - Sponsorship available at https://github.com/sponsors/Sv443
+  - No paid tiers or premium plans exist as of 2026
