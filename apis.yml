@@ -1,7 +1,7 @@
 aid: joke-api
 name: JokeAPI
 description: JokeAPI is a free, open-source REST API that delivers consistently formatted jokes with no authentication, registration, or payment required. It provides over 1,368 jokes across categories including Programming, Misc, Dark, Pun, Spooky, and Christmas in 6 languages. The API supports rich filtering by category, language, content flags (NSFW, Religious, Political, Racist, Sexist, Explicit), and joke type (single or two-part). Response formats include JSON, XML, YAML, and plain text. A safe mode ensures family-friendly content for appropriate applications.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/joke-api/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -19,7 +19,7 @@ apis:
   - aid: joke-api:joke-api
     name: JokeAPI
     description: A REST API delivering consistently formatted jokes with filtering by category, language, content flags, and joke type. Supports multiple response formats and requires no authentication.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://jokeapi.dev/
     baseURL: https://v2.jokeapi.dev
     tags:
