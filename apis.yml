@@ -40,7 +40,7 @@ apis:
         url: https://github.com/Sv443-Network/JokeAPI
       - type: StatusPage
         url: https://status.sv443.net/
-      - type: Changelog
+      - type: ChangeLog
         url: https://github.com/Sv443-Network/JokeAPI/blob/master/changelog.md
       - type: Discord
         url: https://sv443.net/discord
